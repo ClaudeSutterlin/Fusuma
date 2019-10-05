@@ -110,7 +110,7 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
         flashConfiguration()
         startCamera()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(FSCameraView.willEnterForegroundNotification(_:)), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(FSCameraView.willEnterForegroundNotification(_:)), name: .UIApplicationWillEnterForeground, object: nil)
 
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchToZoom))
         previewViewContainer.addGestureRecognizer(pinchGestureRecognizer)

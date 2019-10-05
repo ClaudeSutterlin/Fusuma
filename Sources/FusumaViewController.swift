@@ -532,20 +532,20 @@ private extension FusumaViewController {
         case .library:
             titleLabel.text = NSLocalizedString(fusumaCameraRollTitle, comment: fusumaCameraRollTitle)
             highlightButton(libraryButton)
-            view.bringSubviewToFront(photoLibraryViewerContainer)
+            view.bringSubview(toFront: photoLibraryViewerContainer)
         case .camera:
             titleLabel.text = NSLocalizedString(fusumaCameraTitle, comment: fusumaCameraTitle)
             highlightButton(cameraButton)
-            view.bringSubviewToFront(cameraShotContainer)
+            view.bringSubview(toFront: cameraShotContainer)
             cameraView.startCamera()
         case .video:
             titleLabel.text = NSLocalizedString(fusumaVideoTitle, comment: fusumaVideoTitle)
             highlightButton(videoButton)
-            view.bringSubviewToFront(videoShotContainer)
+            view.bringSubview(toFront: videoShotContainer)
             videoView.startCamera()
         }
 
-        view.bringSubviewToFront(menuView)
+        view.bringSubview(toFront: menuView)
     }
 
     func updateDoneButtonVisibility() {
